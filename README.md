@@ -1,4 +1,4 @@
-# Generic Instagram Clone 
+# Generic Instagram Clone
 
 A straightforward photo sharing web app made with Laravel 5, Redis, and Bootstrap 4.
 
@@ -10,6 +10,9 @@ A straightforward photo sharing web app made with Laravel 5, Redis, and Bootstra
 * create new database and edit .env file for DB settings
 * php artisan migrate —seed
 * php artisan serve
+
+### Setting Up Redis
+* composer require predis/predis
 
 
 ### Include
@@ -25,9 +28,9 @@ A straightforward photo sharing web app made with Laravel 5, Redis, and Bootstra
 * Make comments on images
 * Find and follow your friends and send direct message to them
 * Like images
-* Images are posted with no filters what so ever 
+* Images are posted with no filters what so ever
 
-### Pages 
+### Pages
 
 * Home view - live feed view with buttons to create a new post (also includes links to account management)
 * Profile view - view user posts, followers, who this user is following, and number of posts  
