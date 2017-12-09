@@ -12,7 +12,12 @@ A straightforward photo sharing web app made with Laravel 5, Redis, and Bootstra
 * php artisan serve
 
 ### Setting Up Redis
+* (On mac) brew install redis
 * composer require predis/predis
+* Start redis server: launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+* Test if server is running: redis-cli ping
+* Run Redis shell: redis-cli
+* View keys in redis: keys *
 
 
 ### Include

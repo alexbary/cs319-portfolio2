@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/redis', function(){
-  print_r(app()->make('redis'));
+  $redis = app()->make('redis');
+  $redis->set('key1', 'testValue');
+  return $redis->get('key1');
 });
 
 Auth::routes();
