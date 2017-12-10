@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/redis', function(){
   $redis = app()->make('redis');
@@ -21,6 +21,11 @@ Route::get('/redis', function(){
   return $redis->get('key1');
 });
 
+Route::get('/', 'PagesController@frontpage');
+Route::get('/profile', 'PagesController@profile');
+Route::get('/feed', 'PagesController@feed');
+
+Route::resource('posts', 'PostsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
