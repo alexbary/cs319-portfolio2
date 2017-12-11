@@ -23,7 +23,9 @@ Route::get('/redisTest', function(){
 
 Route::get('/', 'PagesController@frontpage');
 Route::get('/profile/{id}', ['uses' =>'PagesController@profile']);
-// Route::get('/feed', 'PagesController@feed');
+
+Route::get('/getActivity', 'ActivityController@getActivity');
+Route::get('/activity');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
