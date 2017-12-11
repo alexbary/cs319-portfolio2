@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/redis', function(){
+Route::get('/redisTest', function(){
   $redis = app()->make('redis');
   $redis->set('key1', 'testValue');
   return $redis->get('key1');
@@ -23,9 +23,10 @@ Route::get('/redis', function(){
 
 Route::get('/', 'PagesController@frontpage');
 Route::get('/profile', 'PagesController@profile');
-Route::get('/feed', 'PagesController@feed');
+// Route::get('/feed', 'PagesController@feed');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
 
+// home view is the feed view
 Route::get('/home', 'HomeController@index')->name('home');
