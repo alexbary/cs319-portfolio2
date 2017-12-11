@@ -16,6 +16,9 @@
 // });
 
 Route::get('/redisTest', 'ActivityController@activity');
+Route::get('/getActivity', 'ActivityController@getActivity');
+
+Route::get('/activity');
 
 Route::get('/', 'PagesController@frontpage');
 Route::get('/profile', 'PagesController@profile');
