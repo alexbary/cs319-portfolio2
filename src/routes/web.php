@@ -15,11 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/redisTest', function(){
-  $redis = app()->make('redis');
-  $redis->set('key1', 'testValue');
-  return $redis->get('key1');
-});
+Route::get('/redisTest', 'ActivityController@activity');
 
 Route::get('/', 'PagesController@frontpage');
 Route::get('/profile', 'PagesController@profile');
