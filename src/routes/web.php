@@ -22,11 +22,11 @@ Route::get('/redisTest', function(){
 });
 
 Route::get('/', 'PagesController@frontpage');
-Route::get('/profile', 'PagesController@profile');
+Route::get('/profile/{id}', ['uses' =>'PagesController@profile']);
 // Route::get('/feed', 'PagesController@feed');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
 
 // home view is the feed view
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PostsController@index')->name('home');

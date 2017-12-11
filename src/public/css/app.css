@@ -11525,3 +11525,29 @@ hr {
   width: 100%;
 }
 
+/* Profile */
+
+.profile-user-image-div {
+  display: block;
+  margin: auto;
+}
+
+#img-user {
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-user-image {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+

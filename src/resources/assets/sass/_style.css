@@ -116,3 +116,25 @@ hr{
   	/*margin-left: 10px;*/
  	width: 100%;
 }
+
+/* Profile */
+
+.profile-user-image-div {
+    display: block;
+    margin: auto;
+}
+
+#img-user {
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+	align-items: center;
+}
+
+.profile-user-image{
+	border-radius: 50%;
+	width: 160px;
+	height: 160px;
+	vertical-align: middle;
+	align-items: center;
+}

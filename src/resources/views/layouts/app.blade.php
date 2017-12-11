@@ -48,7 +48,7 @@
                             <li><a href="{{ route('register') }}">Sign up</a></li>
                         @else
                             <li> 
-                                <a href="{{ url('create') }}"><i class="fa fa-plus" aria-hidden="true"></i> Create New Post</a>
+                                <a href="{{ url('posts/create') }}"><i class="fa fa-plus" aria-hidden="true"></i> Create New Post</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -58,6 +58,9 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ url('profile', Auth::user()->id) }}">My Profile</a>
+                                    </li>
+                                   <li>
+                                        <a href="{{ url('notifications') }}">Notifications</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('logout') }}"

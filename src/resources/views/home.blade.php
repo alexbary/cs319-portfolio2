@@ -5,7 +5,7 @@
     @include('included.messages')
     <div class="row">
         <div class="col-md-7">
-            <div class="panel panel-default">
+<!--             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
@@ -17,7 +17,7 @@
 
                     You are logged in!
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -41,8 +41,8 @@
                     <br>
                     <p class="likes">42 Likes</p>
                     <p><a class="instagram-card-content-user" href="">mitra</a> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.  😜❄️ <a class="hashtag" href="">#worksgreat</a></p>
-                    <p class="comments">ver los 48 comentarios</p>
-                    <br><a class="user-comment" href="">cat243</a> wowwwwww</br>
+                    
+                    <br><a class="user-comment" href="">cat243</a> wow so cool</br>
                     <br><a class="user-comment" href="">alexbary</a> 😍</br>
                     <br><a class="user-comment" href="">usernametest</a> cool ❄️</br>
                     <!-- <hr> -->
