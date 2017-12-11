@@ -49,7 +49,5 @@ class ActivityController extends Controller
     $output .= '</body></html>';
 
     echo $output;
-    //return $decoded;
-
   }
 }
