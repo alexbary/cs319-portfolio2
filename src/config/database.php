@@ -111,12 +111,28 @@ return [
         'cluster' => false,
 
         'default' => [
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
+            'host' => env('REDIS_HOST', 'redis-14909.c10.us-east-1-4.ec2.cloud.redislabs.com:14909'),
+            'password' => env('REDIS_PASSWORD', 'qwerty'),
+            'port' => env('REDIS_PORT', 14909),
             'database' => 0,
         ],
 
     ],
+
+    // backup
+    // 'redis' => [
+
+    //     'client' => 'predis',
+
+    //     'cluster' => false,
+
+    //     'default' => [
+    //         'host' => env('REDIS_HOST', '127.0.0.1'),
+    //         'password' => env('REDIS_PASSWORD', null),
+    //         'port' => env('REDIS_PORT', 6379),
+    //         'database' => 0,
+    //     ],
+
+    // ],
 
 ];

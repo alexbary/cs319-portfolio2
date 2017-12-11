@@ -20,7 +20,19 @@ class PostsController extends Controller
         // $books_table = DB::select('SELECT * FROM books_table');
         // return view('books.index')->with('books_table', $books_table); 
         // return view('posts.profile');
-        return view('home');
+        //$result = Rediis::command('flushall', []);
+        $data = Redis::command('scan', [0, "MATCH", "*post:*"]);
+        $result = array();
+        
+        foreach ($data[1] as $item) {
+            //                                              0           1           2       3               4   5           6
+            $post_data = Redis::command('hmget', ["$item", "user_id", "username", "time", "comments_id", "url", "caption", "likes_id"]);
+            $result[] = $post_data;   
+        }
+        
+        // return $result[1];
+        // return $arr;
+        return view('home')->with('data', $result);
     }
 
     /**
@@ -51,7 +63,7 @@ class PostsController extends Controller
         $postID = Redis::command('incr', ['next_post_id']);
         $commentID = Redis::command('incr', ['next_comments_id']);
         $likesID = Redis::command('incr', ['next_likes_id']);
-        $result = Redis::command("hmset", ["post:$postID", "user_id", $user->id, "time", time(), "comments_id", $commentID,"url", $url, "caption", $caption, "likes_id", $likesID ]);
+        $result = Redis::command("hmset", ["post:$postID", "user_id", $user->id, "username", $user->name, "time", time(), "comments_id", $commentID,"url", $url, "caption", $caption, "likes_id", $likesID ]);
 
         return redirect('home')->with('success', 'Post successfully uploaded.');
 

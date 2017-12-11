@@ -47,6 +47,15 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Sign up</a></li>
                         @else
+                            <li>
+
+                                    <form class="navbar-form" role="search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search" name="q">
+                                        </div>
+                                    </form>
+
+                            </li>
                             <li> 
                                 <a href="{{ url('posts/create') }}"><i class="fa fa-plus" aria-hidden="true"></i> Create New Post</a>
                             </li>

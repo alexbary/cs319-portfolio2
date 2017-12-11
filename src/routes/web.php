@@ -25,10 +25,9 @@ Route::get('/', 'PagesController@frontpage');
 Route::get('/profile/{id}', ['uses' =>'PagesController@profile']);
 
 Route::get('/getActivity', 'ActivityController@getActivity');
-Route::get('/activity');
+// Route::get('/activity');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
 
-// home view is the feed view
 Route::get('/home', 'PostsController@index')->name('home');
